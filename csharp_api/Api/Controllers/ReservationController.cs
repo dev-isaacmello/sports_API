@@ -160,7 +160,7 @@ public class ReservationController(IReservationService reservationService) : Con
         {
             return NotFound(new { message = ex.Message });
         }
-        catch (UnauthorizedAccessException ex)
+        catch (UnauthorizedAccessException)
         {
             return Forbid();
         }
@@ -190,7 +190,7 @@ public class ReservationController(IReservationService reservationService) : Con
         {
             return NotFound(new { message = ex.Message });
         }
-        catch (UnauthorizedAccessException ex)
+        catch (UnauthorizedAccessException)
         {
             return Forbid();
         }
@@ -223,7 +223,7 @@ public class ReservationController(IReservationService reservationService) : Con
         {
             return NotFound(new { message = ex.Message });
         }
-        catch (UnauthorizedAccessException ex)
+        catch (UnauthorizedAccessException)
         {
             return Forbid();
         }
