@@ -78,7 +78,12 @@ builder.Services.AddSwaggerGen(options =>
 });
 
 // Configuração da DI (serviços e repositórios)
+// Validators
 builder.Services.AddScoped<UserDtoValidator>();
+builder.Services.AddScoped<RegisterDtoValidator>();
+builder.Services.AddScoped<LoginDtoValidator>();
+builder.Services.AddScoped<CreateCourtDtoValidator>();
+builder.Services.AddScoped<CreateReservationDtoValidator>();
 
 // Repositories
 builder.Services.AddScoped<IUserRepository, UserRepository>();
