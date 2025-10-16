@@ -21,6 +21,12 @@ public class UserRepository(AppDbContext context) : IUserRepository
         return user;
     }
     
+    // método que retorna usuário por email
+    public async Task<Users?> GetUserByEmailAsync(string email)
+    {
+        return await context.Users.FirstOrDefaultAsync(u => u.Email == email);
+    }
+    
     // método que vai adicionar um usuário
     public async Task<Users> InsertUserAsync(Users user)
     {
